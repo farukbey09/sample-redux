@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Counter from "./components/Counter";
+import IncreaseCounter from "./components/IncreaseCounter";
+import DecreaseCounter from "./components/DecreaseCounter";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ marginTop: "100px" }}>
+      <div style={{ textAlign: "center" }}>
+        <Counter />
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-evenly",
+          marginTop: "100px",
+        }}
+      >
+        <IncreaseCounter />
+        <DecreaseCounter />
+      </div>
     </div>
   );
 }
